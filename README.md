@@ -15,9 +15,34 @@ I made these scripts for me, the code is hacky. It doesn't really need to be tha
 # turtlepower scripts
 
 ## turtlepower_lhost
-## turtlepower_server_pyserver
-## turtlepower_server_pyserver_ls
-## turtlepower_reverse_shell
-## turtlepower_boarding_kit
+## turtlepower_server_pyserver & turtlepower_server_pyserver_ls
 
-# Usage
+## turtlepower_reverse_shell
+
+
+# Setup
+Make a scripts folder in your kali home directory and put turtlepower in
+
+```mkdir /home/kali/scripts
+cd /home/kali/scripts
+git clone https://github.com/kintsugi-sec/turtlepower
+cd turtlepower
+chmod a+x *```
+
+
+Add the following lines to your .bashrc
+```## Turtlepower ## 
+
+# shows us the IP of tun0 and sets it to $lhost_ip
+alias turtlepower_lhost='/home/kali/scripts/turtlepower/./turtlepower_lhost.sh'
+
+# server setup scripts
+alias turtlepower_server_pyserver='/home/kali/scripts/turtlepower/./turtlepower_pyserver.sh'
+alias turtlepower_server_pyserver_ls='/home/kali/scripts/turtlepower/./turtlepower_pyserver_ls.sh'
+
+# reverse shell scripts
+alias turtlepower_reverse_shell='/home/kali/scripts/turtlepower/./turtlepower_reverse_shell.sh'```
+
+Save, close and reload your .bashrc
+
+```source .bashrc```
