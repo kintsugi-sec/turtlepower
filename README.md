@@ -15,10 +15,30 @@ I made these scripts for me, the code is hacky. It doesn't really need to be tha
 # turtlepower scripts
 
 ## turtlepower_lhost
-## turtlepower_server_pyserver & turtlepower_server_pyserver_ls
+We use this first just to echo out into our terminal the command to set out lhost for the rest of the scripts. Even though some people may moan about having to copy and paste one thing in, I thought it was a bad idea to hardcode this into the scripts meaning you can easily work across different interfaces and you won't accidentally pwn things you are not meant to pwn
 
+Usage: 
+```
+$ turtlepower_lhost
+```
+## turtlepower_server_pyserver
+Sets up a python http server on port 80, then lets you choose a file transfer method, for example powershell, certutil or wget, then prints in the terminal the command to download the files in the directory you launched it from in your file transfer method of choice. 
+
+You are meant to copy and paste the command into a command prompt on the box you are attacking. Saves a lot of time transferring files
+
+Usage:
+```
+$ turtlepower_server_pyserver
+```
 ## turtlepower_reverse_shell
+You choose the sort of reverse shell you want, for example, powershell, socat, netcat, python, you choose the LPORT and it will echo the command in your terminal to paste into the box you are attacking. 
 
+It will also set up a netcat listener to catch it as well if you want.
+
+Usage:
+```
+$ turtlepower_reverse_shell
+```
 
 # Setup
 Make a scripts folder in your kali home directory and put turtlepower in
