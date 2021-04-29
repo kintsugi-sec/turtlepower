@@ -23,7 +23,8 @@ I made these scripts for me, the code is hacky. It doesn't really need to be tha
 # Setup
 Make a scripts folder in your kali home directory and put turtlepower in
 
-```mkdir /home/kali/scripts
+```
+mkdir /home/kali/scripts
 cd /home/kali/scripts
 git clone https://github.com/kintsugi-sec/turtlepower
 cd turtlepower
@@ -32,7 +33,8 @@ chmod a+x *
 
 
 Add the following lines to your .bashrc
-```## Turtlepower ## 
+```
+## Turtlepower ## 
 
 # shows us the IP of tun0 and sets it to $lhost_ip
 alias turtlepower_lhost='/home/kali/scripts/turtlepower/./turtlepower_lhost.sh'
@@ -47,5 +49,6 @@ alias turtlepower_reverse_shell='/home/kali/scripts/turtlepower/./turtlepower_re
 
 Save, close and reload your .bashrc
 
-```source .bashrc
+```
+source .bashrc
 ```
