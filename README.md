@@ -23,6 +23,7 @@ Usage:
 $ turtlepower_lhost
 ```
 ## turtlepower_server_pyserver
+![](server.gif)
 Sets up a python http server on port 80, then lets you choose a file transfer method, for example powershell, certutil or wget, then prints in the terminal the command to download the files in the directory you launched it from in your file transfer method of choice. 
 
 You are meant to copy and paste the command into a command prompt on the box you are attacking. Saves a lot of time transferring files
@@ -32,6 +33,7 @@ Usage:
 $ turtlepower_server_pyserver
 ```
 ## turtlepower_reverse_shell
+![](reverse.gif)
 You choose the sort of reverse shell you want, for example, powershell, socat, netcat, python, you choose the LPORT and it will echo the command in your terminal to paste into the box you are attacking. 
 
 It will also set up a netcat listener to catch it as well if you want.
