@@ -14,8 +14,10 @@ I made these scripts for me, the code is hacky. It doesn't really need to be tha
 
 # turtlepower scripts
 
-# turtlepower_lhost
-# turtlepower_server_pyserver
-# turtlepower_server_pyserver_ls
-# turtlepower_reverse_shell
-# turtlepower_boarding_kit
+## turtlepower_lhost
+## turtlepower_server_pyserver
+## turtlepower_server_pyserver_ls
+## turtlepower_reverse_shell
+## turtlepower_boarding_kit
+
+# Usage
