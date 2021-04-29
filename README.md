@@ -10,7 +10,8 @@ Simple, repetive tasks we do in pentesting like setting up webserver and downloa
 I have also made the scripts easy to adapt to add file transfer methods or shells you wish to add.
 
 DISCLAIMER:
-I made these scripts for me, the code is hacky. It doesn't really need to be that optimised does it though, not a whole lot of computing power going on here
+I made these scripts for me, the code is hacky. It doesn't really need to be that optimised does it though, not a whole lot of computing power going on here.
+Get in touch if you want to refine it as long as you give me credit.
 
 # turtlepower scripts
 
