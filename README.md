@@ -27,7 +27,8 @@ Make a scripts folder in your kali home directory and put turtlepower in
 cd /home/kali/scripts
 git clone https://github.com/kintsugi-sec/turtlepower
 cd turtlepower
-chmod a+x *```
+chmod a+x *
+```
 
 
 Add the following lines to your .bashrc
@@ -41,8 +42,10 @@ alias turtlepower_server_pyserver='/home/kali/scripts/turtlepower/./turtlepower_
 alias turtlepower_server_pyserver_ls='/home/kali/scripts/turtlepower/./turtlepower_pyserver_ls.sh'
 
 # reverse shell scripts
-alias turtlepower_reverse_shell='/home/kali/scripts/turtlepower/./turtlepower_reverse_shell.sh'```
+alias turtlepower_reverse_shell='/home/kali/scripts/turtlepower/./turtlepower_reverse_shell.sh'
+```
 
 Save, close and reload your .bashrc
 
-```source .bashrc```
+```source .bashrc
+```
