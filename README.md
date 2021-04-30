@@ -32,6 +32,10 @@ Usage:
 ```
 $ turtlepower_server_pyserver
 ```
+You can also use this if you just want to print the transfer methods and not spin up an HTTP server:
+```
+$ turtlepower_server_pyserver_ls
+```
 ## turtlepower_reverse_shell
 ![](reverse.gif)
 You choose the sort of reverse shell you want, for example, powershell, socat, netcat, python, you choose the LPORT and it will echo the command in your terminal to paste into the box you are attacking. 
