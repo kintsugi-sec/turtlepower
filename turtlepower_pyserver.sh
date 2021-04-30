@@ -17,7 +17,7 @@ echo ""
 
 
 if [ "$LS_FILES_SCRIPT" = "Y" ] ; then
-	/home/kali/scripts/turtlepower/./turtlepower_pyserver_ls.sh
+	/home/kali/scripts/turtlepower/./turtlepower_pyserver_ls.sh 80
 else
 	echo ""
 fi
