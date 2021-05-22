@@ -78,9 +78,14 @@ Add the following lines to your .bashrc
 # shows us the IP of tun0 and sets it to $lhost_ip
 alias turtlepower_lhost='/home/kali/scripts/turtlepower/./turtlepower_lhost.sh'
 
+# if you want to hardcode in a lhost IP, uncomment this and put in the IP
+# export turtlepower_lhost=192.168.1.101
+
 # server setup scripts
 alias turtlepower_server_pyserver='/home/kali/scripts/turtlepower/./turtlepower_pyserver.sh'
 alias turtlepower_server_pyserver_ls='/home/kali/scripts/turtlepower/./turtlepower_pyserver_ls.sh'
+alias turtlepower_server_smbserver='/home/kali/scripts/turtlepower/./turtlepower_smbserver.sh'
+
 
 # reverse shell scripts
 alias turtlepower_reverse_shell='/home/kali/scripts/turtlepower/./turtlepower_reverse_shell.sh'
