@@ -16,7 +16,11 @@ Get in touch if you want to refine it as long as you give me credit.
 # turtlepower scripts
 
 ## turtlepower_lhost
-We use this first just to echo out into our terminal the command to set out lhost for the rest of the scripts. Even though some people may moan about having to copy and paste one thing in, I thought it was a bad idea to hardcode this into the scripts meaning you can easily work across different interfaces and you won't accidentally pwn things you are not meant to pwn
+We use this first just to echo out into our terminal the command to set out lhost for the rest of the scripts. Even though some people may moan about having to copy and paste one thing in, I thought it was a bad idea to hardcode this into the scripts meaning you can easily work across different interfaces and servers and you won't accidentally pwn things you are not meant to pwn.
+
+If you want to live dangerously and hardcode a lhost for your session, just put a line in your .bashrc like this 
+export turtlepower_lhost=192.168.1.101
+
 
 Usage: 
 ```
@@ -35,6 +39,13 @@ $ turtlepower_server_pyserver
 You can also use this if you just want to print the transfer methods and not spin up an HTTP server:
 ```
 $ turtlepower_server_pyserver_ls
+```
+## turtlepower_server_smbserver
+![smb_server](master/smb_server.png)
+Like python server, but spins up a SMB server with Impacket and lists the commands to download or execute in memory the files in your working directory over SMB. 
+Usage:
+```
+$ turtlepower_server_smbserver
 ```
 ## turtlepower_reverse_shell
 ![](reverse.gif)
